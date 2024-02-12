@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - cp views/index.ejs public/index.html
+    - for f in ./public/slides/*.md; do FILENAME=$(echo "${f##*/}" | sed 's/\.[^.]*$//'); sed 's/<%= session %>/slides\/'"$FILENAME"'/g' views/slides.ejs > public/$FILENAME.html ; done
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

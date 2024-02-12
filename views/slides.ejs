@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Presentation</title>
+        <meta charset="utf-8" />
+        <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <textarea id="source"></textarea>
+        <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+        <script>
+            fetch('<%= session %>.md').then(async (data) => {
+                let textarea = document.getElementsByTagName('textarea')[0];
+                let slideData = await data.text();
+                textarea.innerHTML = slideData;
+                var slideshow = remark.create({
+                    highlightLanguage: 'auto',
+                    highlightStyle: 'monokai',
+                });
+                setTimeout(() => {
+                    document.querySelectorAll('.remark-slide [id*=slide-]').forEach((slideElement) => {
+                        slideElement.querySelectorAll('.left-column h3').forEach((child) => {
+                            if (slideElement.id.endsWith(child.id)) {
+                                child.classList.add('active');
+                            }
+                        });
+                    });
+                }, 1);
+            });
+        </script>
+    </body>
+</html>
