@@ -30,7 +30,7 @@ jobs:
         run: |
           sed -E 's/href="slides\/(.*)"/href="\1.html"/g' views/index.ejs > public/index.html
           for f in ./public/slides/*.md; do FILENAME=$(echo "${f##*/}" | sed 's/\.[^.]*$//'); sed 's/<%= session %>/slides\/'"$FILENAME"'/g' views/slides.ejs > public/$FILENAME.html ; done
-          for f in ./public/*.html; do sed -i 's/base href="\/"/base href="https:\/\/'"${GITHUB_REPOSITORY_OWNER}"'.github.io\/'"${GITHUB_REPOSITORY##*/}"'\/"/g' $f ; done
+          for f in ./public/*.html; do sed -i 's/base href="\/"/base href="\/'"${GITHUB_REPOSITORY##*/}"'\/"/g' $f ; done
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
