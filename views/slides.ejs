@@ -11,7 +11,7 @@
         <textarea id="source"></textarea>
         <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
         <script>
-            fetch('<%= session %>.md').then(async (data) => {
+            fetch('slides/<%= session %>.md').then(async (data) => {
                 let textarea = document.getElementsByTagName('textarea')[0];
                 let slideData = await data.text();
                 textarea.innerHTML = slideData;
