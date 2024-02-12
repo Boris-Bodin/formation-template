@@ -28,8 +28,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare public folder
         run: |
-          cp views/index.ejs public/index.html
+          sed -E 's/href="slides\/(.*)"/href="\1.html"/g' views/index.ejs > public/index.html
           for f in ./public/slides/*.md; do FILENAME=$(echo "${f##*/}" | sed 's/\.[^.]*$//'); sed 's/<%= session %>/slides\/'"$FILENAME"'/g' views/slides.ejs > public/$FILENAME.html ; done
+          for f in ./public/*.html; do sed -i 's/base href="/"/base href="'"${{ site.github.url }}"'"/g' $f ; done
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
