@@ -39,7 +39,9 @@ npm install
 
 The project uses markdown files located in the `public/slides` directory to generate the slides. Each markdown file represents a session. The markdown files use a specific syntax to define the layout and content of the slides.
 
-The slides are generated using [remark.js](https://remarkjs.com/), a flexible, browser-based markdown presentation tool. The markdown files are converted into slides in real-time, providing a live-preview of the presentation as you write.
+The slides are generated using [remark.js](https://remarkjs.com/), a flexible, browser-based markdown presentation tool.
+
+For add a session, create a new markdown file in the `public/slides` directory. And add a button in the `views/index.ejs` file to link to the new session.
 
 The name of a slide should be the snake_case version of the section title. For example, if the section title is `### My Section`, the slide name should be `name: my-section`. Special characters in the section title should be replaced with a '-'. This naming convention ensures that the sections title are displayed correctly in the presentation.
 
