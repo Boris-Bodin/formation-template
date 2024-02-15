@@ -15,10 +15,18 @@ template: inverse
 
 .footnote[Formation's author]
 
+???
+
+"Here it's a presenter's note"
+
 ---
 template: inverse
 
 ## First Chapter
+
+???
+
+"Here it's a presenter's note"
 
 ---
 template: animated
@@ -43,6 +51,10 @@ class: menu-section-1
 - Point 2
 - Point 3
 
+???
+
+"Here it's a presenter's note"
+
 ---
 class: menu-section-1
 
@@ -51,6 +63,10 @@ class: menu-section-1
 - Point 4
 - Point 5
 - Point 6
+
+???
+
+"Here it's a presenter's note"
 
 ---
 class: menu-section-2
@@ -61,6 +77,10 @@ class: menu-section-2
 - Point 2
 - Point 3
 
+???
+
+"Here it's a presenter's note"
+
 ---
 class: menu-section-3
 
@@ -70,10 +90,18 @@ class: menu-section-3
 - Point 2
 - Point 3
 
+???
+
+"Here it's a presenter's note"
+
 ---
 template: inverse
 
 ## Second Chapter
+
+???
+
+"Here it's a presenter's note"
 
 ---
 template: animated
@@ -97,6 +125,10 @@ class: menu-section-1
 - Point 2
 - Point 3
 
+???
+
+"Here it's a presenter's note"
+
 ---
 class: menu-section-2
 
@@ -105,3 +137,7 @@ class: menu-section-2
 - Point 1
 - Point 2
 - Point 3
+
+???
+
+"Here it's a presenter's note"

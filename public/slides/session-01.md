@@ -1,10 +1,12 @@
 name: animated
 layout: true
 class: animated, fadeInRight, faster
+
 ---
 name: inverse
 layout: true
 class: center, middle, inverse, animated, fadeInRight, faster
+
 ---
 template: inverse
 
@@ -13,18 +15,10 @@ template: inverse
 
 .footnote[Formation's author]
 
-???
-
-"Here it's a presenter's note"
-
 ---
 template: inverse
 
 ## First Chapter
-
-???
-
-"Here it's a presenter's note"
 
 ---
 template: animated
@@ -39,8 +33,9 @@ layout: true
 .right-column[
 {{content}}
 ]
+
 ---
-name: section-1
+class: menu-section-1
 
 #### Slide 1
 
@@ -48,12 +43,8 @@ name: section-1
 - Point 2
 - Point 3
 
-???
-
-"Here it's a presenter's note"
-
 ---
-name: section-1
+class: menu-section-1
 
 #### Slide 2
 
@@ -61,12 +52,8 @@ name: section-1
 - Point 5
 - Point 6
 
-???
-
-"Here it's a presenter's note"
-
 ---
-name: section-2
+class: menu-section-2
 
 #### Slide 3
 
@@ -74,12 +61,8 @@ name: section-2
 - Point 2
 - Point 3
 
-???
-
-"Here it's a presenter's note"
-
 ---
-name: section-3
+class: menu-section-3
 
 #### Slide 4
 
@@ -87,18 +70,10 @@ name: section-3
 - Point 2
 - Point 3
 
-???
-
-"Here it's a presenter's note"
-
 ---
 template: inverse
 
 ## Second Chapter
-
-???
-
-"Here it's a presenter's note"
 
 ---
 template: animated
@@ -112,8 +87,9 @@ layout: true
 .right-column[
 {{content}}
 ]
+
 ---
-name: section-1
+class: menu-section-1
 
 #### Slide 5
 
@@ -121,19 +97,11 @@ name: section-1
 - Point 2
 - Point 3
 
-???
-
-"Here it's a presenter's note"
-
 ---
-name: section-2
+class: menu-section-2
 
 #### Slide 6
 
 - Point 1
 - Point 2
 - Point 3
-
-???
-
-"Here it's a presenter's note"

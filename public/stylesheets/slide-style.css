@@ -12,6 +12,9 @@ h3 {
     font-weight: 400;
     margin-bottom: 0;
 }
+.remark-slide-content {
+    padding: 0em 2em;
+}
 .remark-slide-content h1 {
     font-size: 3em;
 }
@@ -30,6 +33,16 @@ h3 {
 li {
     line-height: 1.25em;
     margin-bottom: 15px;
+}
+li p {
+    margin-bottom: 15px;
+}
+li ul {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+li ul li {
+    margin-bottom: 5px;
 }
 code {
     background: #272822;
@@ -52,18 +65,30 @@ code {
 }
 
 /* Two-column layout */
+.remark-slide-content.two-column {
+    display: flex;
+    height: calc(100% - 0em);
+    gap: 20px;
+}
 .left-column {
     color: #777;
-    width: 20%;
-    height: 92%;
-    float: left;
+    width: 25%;
+    min-width: 25%;
+    max-width: 25%;
 }
 .left-column h2:last-of-type,
 .left-column h3.active {
     color: #000;
 }
 .right-column {
-    width: 75%;
-    float: right;
-    padding-top: 1em;
+    padding-top: 0.75em;
+    max-width: 73%;
+}
+
+/* Presentateur mode */
+.remark-notes-area .remark-bottom-area .remark-notes-current-area{
+    height: 80%;
+}
+.remark-notes-area .remark-bottom-area .remark-notes-preview-area {
+    height: 20%;
 }

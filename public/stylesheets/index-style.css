@@ -1,0 +1,22 @@
+body{
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.5634628851540616) 0%, rgba(9,9,121,0.4738270308123249) 35%, rgba(0,212,255,0.4009978991596639) 100%);
+}
+
+.card {
+    width: fit-content;
+    padding: 50px;
+
+    margin: auto;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-clip: padding-box;
+    min-height: 400px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.32), 0 2px 10px 0 rgba(0, 0, 0, 0.24);
+
+    background-color: #ECECEC !important;
+    color: #3D3D3D !important;
+
+}
