@@ -86,7 +86,7 @@ code {
 }
 .right-column {
     padding-top: 0.25em;
-    max-width: 73%;
+    flex: 1 1 auto;
 }
 
 /* Presentateur mode */
@@ -95,4 +95,19 @@ code {
 }
 .remark-notes-area .remark-bottom-area .remark-notes-preview-area {
     height: 20%;
+}
+
+/* Demonstration */
+.group-example {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.block-example {
+    height: 150px;
+    width: 150px;
+    border: 1px solid silver;
 }

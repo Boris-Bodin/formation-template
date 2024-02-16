@@ -43,6 +43,13 @@ class: menu-section-1
 - Point 2
 - Point 3
 
+<div class="group-example">
+  <div class="block-example" style="box-shadow: 3px 3px 5px rgba(0,0,0,0.3);"></div>
+  <div class="block-example" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.5);"></div>
+  <div class="block-example" style="box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);"></div>
+  <div class="block-example" style="box-shadow: 3px 3px 5px rgba(150,0,0,0.3), -3px -3px 5px rgba(0,0,150,0.1);"></div>
+</div>
+
 ---
 class: menu-section-1
 
