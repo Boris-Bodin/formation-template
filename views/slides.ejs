@@ -11,13 +11,25 @@
         <textarea id="source"></textarea>
         <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
         <script>
+            function updateUrl(slideshow) {
+                history.replaceState(
+                    '<%= session %>',
+                    '',
+                    location.origin + '/slides/<%= session %>#' + (slideshow.getCurrentSlideIndex() + 1)
+                );
+            }
+
             fetch('slides/<%= session %>.md').then(async (data) => {
                 let textarea = document.getElementsByTagName('textarea')[0];
                 let slideData = await data.text();
                 textarea.innerHTML = slideData;
                 var slideshow = remark.create({
+                    ratio: '16:9',
                     highlightLanguage: 'auto',
                     highlightStyle: 'monokai',
+                });
+                slideshow.on('afterShowSlide', function (slide) {
+                    setTimeout(() => updateUrl(slideshow));
                 });
                 setTimeout(() => {
                     document.querySelectorAll('.remark-slide [class*=menu-]').forEach((slideElement) => {
@@ -27,7 +39,8 @@
                             }
                         });
                     });
-                }, 1);
+                    updateUrl(slideshow);
+                });
             });
         </script>
     </body>
